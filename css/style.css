@@ -164,6 +164,7 @@ body {
 
 .post-text__read-more::after {
   content: "Читать далее";
+  font-family: "TT Lakes", "Arial", sans-serif;
   white-space: nowrap;
   font-size: 16px;
   line-height: 24px;
@@ -179,6 +180,17 @@ body {
 }
 
 @media  screen and (max-width: 768px) {
+
+  .container {
+    width: 90%;
+  }
+
+  .post-image {
+    border-radius: 0;
+    transform: translateX(calc((-0.05) * ((100% * 100) / 90)));
+    width: 110%;
+  }
+
   .menu-container::before {
     content:"";
     display:block;
@@ -188,7 +200,7 @@ body {
     left:0;
     top:0;
     z-index:1;
-    border-bottom: 3px solid #D9FFF5;
+    border-bottom: 1px solid #D9FFF5;
    }
 
   body { 
@@ -199,6 +211,12 @@ body {
   
   .title-menu, .comments {
     display: none;
+  }
+
+  .title-line::before {
+    position: absolute;
+    content: url("https://svgshare.com/i/nh1.svg");
+    left: calc((-0.05) * ((100% * 100) / 90));
   }
 
   .post { 
