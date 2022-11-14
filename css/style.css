@@ -60,10 +60,11 @@ body {
 }
 
 .menu-container__right-part li:nth-child(4)::before {
-  content: url("https://svgshare.com/i/ni6.svg");
+  content: url("../assets/images/divider.svg");
   position: relative;
   padding-right: 1.5rem;
 }
+
 .title-line {
   flex-basis: 100%;
   display: flex;
@@ -76,7 +77,7 @@ body {
 
 .title-line::before {
   position: absolute;
-  content: url("https://svgshare.com/i/nh1.svg");
+  content: url("../assets/images/highlights.svg");
   left: calc((-0.025) * ((100% * 100) / 95));
 }
 
@@ -181,15 +182,20 @@ body {
 
 @media  screen and (max-width: 768px) {
 
+  
   .container {
     width: 90%;
   }
 
   .post-image {
     border-radius: 0;
+    position: relative;
     transform: translateX(calc((-0.05) * ((100% * 100) / 90)));
-    width: 110%;
+    width:100vw;
+    height: auto;
   }
+  .post-text { width:90%; }
+
 
   .menu-container::before {
     content:"";
@@ -201,21 +207,15 @@ body {
     top:0;
     z-index:1;
     border-bottom: 1px solid #D9FFF5;
-   }
+    }
 
-  body { 
-   height:100%;
-    background-image: linear-gradient(to bottom, #FFFFFF 0%,#FFFFFF 88px, #F8F8F8 88px, #F8F8F8 100%);
-  }
- 
-  
   .title-menu, .comments {
     display: none;
   }
 
   .title-line::before {
     position: absolute;
-    content: url("https://svgshare.com/i/nh1.svg");
+    content: url("../assets/images/highlights.svg");
     left: calc((-0.05) * ((100% * 100) / 90));
   }
 
@@ -245,9 +245,6 @@ body {
 
 @media  screen and (min-width: 768px) and (max-width: 1120px) {
   
-  body { 
-    background-image: linear-gradient(to bottom, #FFFFFF 88px, #F8F8F8 88px);
-  }
   .post { 
     flex-wrap: nowrap;
     gap: 3%;
@@ -263,10 +260,9 @@ body {
     flex:1;
   }
 
-  .menu-burger-wrapper::after
-  {
-  content: url("https://svgshare.com/i/ni6.svg");
-  padding-left: 1.1em; 
+  .menu-burger-wrapper::after {
+    content: url("../assets/images/divider.svg");
+    padding-left: 1.1em; 
   }
   
   .title-menu, .comments {
@@ -306,15 +302,11 @@ body {
   .nav ul{ 
     flex-wrap: wrap;
   }
-
-
-  
 }
 
+  
 @media  screen and (min-width: 1120px) {
-  body { 
-    background-color:#F8F8F8;
-    }
+
   .post-text, .post-image {
       flex:1;
   }
@@ -354,4 +346,5 @@ body {
       font-size: 16px;
       align-items: center;
     }
-}
+
+    }
